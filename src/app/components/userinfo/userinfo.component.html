@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class=" p-5" *ngIf = "authservice.currentUser">
+            <h2 >
+               Welcome to our app!
+            </h2>
+            <table>
+                <tr><td>Your ID: </td> <td>{{authservice.currentUserId}}</td></tr>
+                <tr><td>Your email: </td> <td>{{authservice.currentUserName}}</td></tr>
+            </table>
+             <button class="btn btn-danger" (click)="authservice.singout()">Logout</button>
+        
+        </div>
+    </div>
+</div>
